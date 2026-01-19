@@ -61,7 +61,7 @@ conda install -c conda-forge -y batman-package
 
 ``` bash
 cd /path/where/you/want/to/save/spiderman
-https://github.com/matt-j-godfrey/SPIDERMAN.git
+git clone https://github.com/matt-j-godfrey/SPIDERMAN.git
 cd SPIDERMAN
 rm -rf build *.egg-info spiderman/_web*.so
 ```
