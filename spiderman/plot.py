@@ -3,7 +3,8 @@ import matplotlib as mpl
 import spiderman as sp
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib._png import read_png
+# from matplotlib._png import read_png
+from matplotlib.image import imread as read_png
 from matplotlib.offsetbox import TextArea, DrawingArea, OffsetImage, \
     AnnotationBbox
 import matplotlib.patches as patches

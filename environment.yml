@@ -1,0 +1,21 @@
+name: spiderman_env2
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - matplotlib
+  - numpy=1.22
+  - pillow
+  - pip
+  - python=3.10
+  - scipy
+  - setuptools
+  - wheel
+  - astropy
+  - fitsio
+  - ipykernel
+  - pip:
+      - batman-package
+      - matplotlib-inline==0.1.6
+prefix: /opt/anaconda3/envs/spiderman_env2
+

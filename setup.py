@@ -1,10 +1,11 @@
 import setuptools
-from distutils.core import setup, Extension
-import numpy.distutils.misc_util
+# from distutils.core import setup, Extension
+from setuptools import setup, Extension
+# import numpy.distutils.misc_util
 import numpy as np
 
 _web = Extension("spiderman._web",["c_src/_web.c","c_src/heron.c","c_src/segment.c","c_src/areas.c","c_src/intersection.c","c_src/generate.c","c_src/blocked.c","c_src/util.c","c_src/pyutil.c","c_src/web.c","c_src/orthographic.c","c_src/ephemeris.c","c_src/blackbody.c","c_src/spline.c","c_src/brightness_maps.c","c_src/legendre_polynomial.c","c_src/bicubic.c","c_src/nrutil.c"
-], extra_compile_args = ["-std=c99"])
+], extra_compile_args = ["-std=c99"], include_dirs=[np.get_include()],)
 
 setup(	name='spiderman-package', 
 	version="1.0.3",
@@ -13,7 +14,7 @@ setup(	name='spiderman-package',
 	url = 'https://github.com/tomlouden/spiderman',
 	download_url = 'https://github.com/tomlouden/spiderman/tarball/1.0.2',
 	packages =['spiderman'],
-	license = ['GNU GPLv3'],
+	license = 'GNU GPLv3',
 	description ='Fast secondary eclipse and phase curve modeling',
 	classifiers = [
 		'Development Status :: 4 - Beta',
@@ -21,7 +22,7 @@ setup(	name='spiderman-package',
 		'Topic :: Scientific/Engineering',
 		'Programming Language :: Python'
 		],
-	include_dirs = [np.get_include()],
+	# include_dirs = [np.get_include()],
 	install_requires = ['numpy'],
 	setup_requires=['wheel'],
 	ext_modules=[_web],
